@@ -2,13 +2,24 @@
  * Created by wtw on 2017/9/29.
  */
 //入口文件
-    import './class/lesson15';
+    import './class/lesson17';
     import 'babel-polyfill';
-class Test{
+   // import {A,test,Hello} from './class/lesson17';
+    /*console.log(A,test,Hello);*/
+
+    /*import * as lesson from './class/lesson17';//!*导出所有，as是别名
+    console.log(lesson.A,lesson.test);
+    */
+
+    import lesson17 from './class/lesson17';
+    console.log(lesson17.A);
+
+
+/*class Test{
     constructor(){
         this.a = 'hello world'
     }
 }
-let test = new Test();
+let test = new Test();*/
 /*document.body.innerHTML = test.a;*/
 

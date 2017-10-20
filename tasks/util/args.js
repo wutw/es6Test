@@ -1,4 +1,4 @@
-import yargs from 'yargs';//定制option选项
+import yargs from 'yargs';//定制命令行参数选项
 
 const args = yargs
 

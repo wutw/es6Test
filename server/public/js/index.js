@@ -3986,35 +3986,9 @@ module.exports = __webpack_require__(125);
 "use strict";
 
 
-var _lesson = __webpack_require__(126);
-
-var _lesson2 = _interopRequireDefault(_lesson);
+__webpack_require__(126);
 
 __webpack_require__(127);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log(_lesson2.default.A);
-
-/*class Test{
-    constructor(){
-        this.a = 'hello world'
-    }
-}
-let test = new Test();*/
-/*document.body.innerHTML = test.a;*/
-
-// import {A,test,Hello} from './class/lesson17';
-/*console.log(A,test,Hello);*/
-
-/*import * as lesson from './class/lesson17';//!*导出所有，as是别名
-console.log(lesson.A,lesson.test);
-*/
-
-/**
- * Created by wtw on 2017/9/29.
- */
-//入口文件
 
 /***/ }),
 /* 126 */
@@ -4023,53 +3997,90 @@ console.log(lesson.A,lesson.test);
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 /**
- * Created by wtw on 2017/10/14.
+ * Created by wtw on 2017/9/30.
  */
-//模块
-/*
-export let A = 123;//模块化暴露
-export function test(){
-    console.log('test');
+{
+    var a = void 0,
+        b = void 0,
+        c = void 0,
+        rest = void 0;
+    //数组解构赋值,没有配对，c为undefined
+    var _ref = [1, 2];
+    a = _ref[0];
+    b = _ref[1];
+    c = _ref[2];
+    console.log(a, b, c);
 }
-export class Hello{
-    test(){
-        console.log('class');
-    }
+{
+    var _a = void 0,
+        _b = void 0,
+        _rest = void 0;
+    _a = 1;
+    _b = 2;
+    _rest = [3, 4, 5, 6];
+
+    console.log(_a, _b, _rest);
 }
-*/
 
-var A = 123;
-var test = function test() {
-    console.log('test');
-};
+//数据交换
+{
+    var _a2 = 1;
+    var _b2 = 2;
+    var _ref2 = [_b2, _a2];
+    _a2 = _ref2[0];
+    _b2 = _ref2[1];
 
-var Hello = function () {
-    function Hello() {
-        _classCallCheck(this, Hello);
-    }
+    console.log(_a2, _b2);
+}
 
-    _createClass(Hello, [{
-        key: 'test',
-        value: function test() {
-            console.log('class');
-        }
-    }]);
+//取得函数返回的每一个值
+{
+    var _a3 = function _a3() {
+        return [1, 2];
+    };
+    var _b3 = void 0,
+        _c = void 0;
 
-    return Hello;
-}();
+    var _a4 = _a3();
 
-exports.default = { //default导出对象不起名字,引入时名字随便定
-    A: A, test: test, Hello: Hello
-};
+    var _a5 = _slicedToArray(_a4, 2);
+
+    _b3 = _a5[0];
+    _c = _a5[1];
+
+    console.log(_b3, _c);
+}
+
+//对象解构赋值
+{
+    var _a6 = void 0,
+        _b4 = void 0;
+    //对象解构赋值
+    var _a$b = { a: 1, b: 2 };
+    _a6 = _a$b.a;
+    _b4 = _a$b.b;
+    console.log(_a6, _b4);
+}
+
+{
+    var o = { p: 42, q: true };
+    var p = o.p,
+        q = o.q; //对象解构赋值，两边都是对象
+
+    console.log(p, q);
+}
+{
+    var _a8 = { a: 3 },
+        _a8$a = _a8.a,
+        _a7 = _a8$a === undefined ? 10 : _a8$a,
+        _a8$b = _a8.b,
+        _b5 = _a8$b === undefined ? 3 : _a8$b;
+
+    console.log(_a7, _b5);
+}
 
 /***/ }),
 /* 127 */
